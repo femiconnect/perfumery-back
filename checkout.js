@@ -23,7 +23,7 @@ async function createCheckoutSession(req, res) {
          mode: 'payment',
          line_items,
          customer_email,
-         success_url: domainUrl, //redirect user back to client
+         success_url: `${domainUrl}/checkout-successful`, //redirect user back to client
          cancel_url: `${domainUrl}/checkout-cancelled`, //redirect user back to client
       });
 
